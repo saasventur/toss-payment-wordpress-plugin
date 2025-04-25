@@ -47,10 +47,10 @@ For support, please visit [our support page](https://saasventur.com/support/).
 ## Screenshots
 
 1. Checkout page with Toss widget  
-   ![Checkout Page](screenshot-1.png)
+   ![Checkout Page](assets/screenshot-1.png)
 
 2. Plugin settings under WooCommerce > Payments  
-   ![Settings Page](screenshot-2.png)
+   ![Settings Page](assets/screenshot-2.png)
 
 
 ## Contributing
