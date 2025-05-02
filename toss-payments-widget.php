@@ -6,7 +6,7 @@
  * Version: 1.1.0
  * Author: SaasVentur
  * Author URI: https://saasventur.com
- * Text Domain: toss-payments-widget
+ * Text Domain: toss-payments-for-woocommerce
  * Domain Path: /languages
  * WC requires at least: 5.0
  * WC tested up to: 8.0
