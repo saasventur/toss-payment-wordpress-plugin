@@ -266,8 +266,9 @@ class WC_Gateway_Toss_Payments_Widget extends WC_Payment_Gateway
                 $this->log_info("Payment verified for order #$order_id (paymentKey: $payment_key)");
                 $order->payment_complete($payment_key);
                 $mode_text = ($this->mode === 'test') ? 'Test Mode: ' : '';
-                $order->add_order_note(__($mode_text . 'Payment completed via Toss Payments.', 'woocommerce'));
-                
+                // $order->add_order_note(__($mode_text . 'Payment completed via Toss Payments.', 'woocommerce'));
+                $order->add_order_note(sprintf(__('%sPayment completed via Toss Payments.', 'woocommerce'), $mode_text));
+
                 // Redirect to success page
                 wp_redirect(add_query_arg(
                     [
