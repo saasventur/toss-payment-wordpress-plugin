@@ -7,7 +7,6 @@
  * Author: SaasVentur
  * Author URI: https://saasventur.com
  * Text Domain: toss-payments-for-woocommerce
- * Domain Path: /languages
  * WC requires at least: 5.0
  * WC tested up to: 8.0
  * License: GPL2+
