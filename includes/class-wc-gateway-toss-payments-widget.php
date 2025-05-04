@@ -18,8 +18,8 @@ class WC_Gateway_Toss_Payments_Widget extends WC_Payment_Gateway
         $this->id                 = 'toss_payments_widget';
         // $this->icon               = apply_filters('woocommerce_toss_icon', TOSS_WIDGET_URL . 'assets/images/toss-logo.png');
         $this->icon               = '';
-        $this->method_title       = __('Toss Payments (Widget)', 'woocommerce');
-        $this->method_description = __('Integrates with Toss Payments using their Payment Widget. Supports demo, test, and production modes.', 'woocommerce');
+        $this->method_title       = __('Toss Payments (Widget)', 'toss-payments-for-woocommerce');
+		$this->method_description = __('Integrates with Toss Payments using their Payment Widget.', 'toss-payments-for-woocommerce');
         $this->has_fields         = false;
         $this->supports           = ['products', 'refunds'];
         
@@ -85,77 +85,77 @@ class WC_Gateway_Toss_Payments_Widget extends WC_Payment_Gateway
      * Initialize Gateway Settings Form Fields
      */
     public function init_form_fields()
-    {
-        $this->form_fields = [
-            'enabled' => [
-                'title'   => __('Enable/Disable', 'woocommerce'),
-                'type'    => 'checkbox',
-                'label'   => __('Enable Toss Payments', 'woocommerce'),
-                'default' => 'yes',
-            ],
-            'title' => [
-                'title'       => __('Title', 'woocommerce'),
-                'type'        => 'text',
-                'description' => __('Title shown at checkout.', 'woocommerce'),
-                'default'     => __('Toss Payments', 'woocommerce'),
-                'desc_tip'    => true,
-            ],
-            'description' => [
-                'title'       => __('Description', 'woocommerce'),
-                'type'        => 'textarea',
-                'description' => __('Payment method description shown at checkout.', 'woocommerce'),
-                'default'     => __('Pay securely using Toss Payments.', 'woocommerce'),
-                'desc_tip'    => true,
-            ],
-            'mode' => [
-                'title'       => __('Mode', 'woocommerce'),
-                'type'        => 'select',
-                'description' => __('Select the payment mode to use.', 'woocommerce'),
-                'default'     => 'demo',
-                'options'     => [
-                    'demo' => __('Demo Mode (Using Toss Docs Test Keys)', 'woocommerce'),
-                    'test' => __('Test Mode (Using Your Test Keys)', 'woocommerce'),
-                    'live' => __('Live Mode (Using Your Production Keys)', 'woocommerce'),
-                ],
-                'desc_tip'    => true,
-            ],
-            'test_client_key' => [
-                'title'       => __('Test Client Key', 'woocommerce'),
-                'type'        => 'text',
-                'description' => __('Your Toss Payments test client key. Required for Test Mode.', 'woocommerce'),
-                'default'     => '',
-                'desc_tip'    => true,
-            ],
-            'test_secret_key' => [
-                'title'       => __('Test Secret Key', 'woocommerce'),
-                'type'        => 'password',
-                'description' => __('Your Toss Payments test secret key. Required for Test Mode.', 'woocommerce'),
-                'default'     => '',
-                'desc_tip'    => true,
-            ],
-            'live_client_key' => [
-                'title'       => __('Live Client Key', 'woocommerce'),
-                'type'        => 'text',
-                'description' => __('Your Toss Payments live client key. Required for Live Mode.', 'woocommerce'),
-                'default'     => '',
-                'desc_tip'    => true,
-            ],
-            'live_secret_key' => [
-                'title'       => __('Live Secret Key', 'woocommerce'),
-                'type'        => 'password',
-                'description' => __('Your Toss Payments live secret key. Required for Live Mode.', 'woocommerce'),
-                'default'     => '',
-                'desc_tip'    => true,
-            ],
-            'debug' => [
-                'title'       => __('Debug log', 'woocommerce'),
-                'type'        => 'checkbox',
-                'label'       => __('Enable logging', 'woocommerce'),
-                'default'     => 'no',
-                'description' => __('Log Toss Payments events, such as webhook requests.', 'woocommerce'),
-            ],
-        ];
-    }
+		{
+			$this->form_fields = [
+				'enabled' => [
+					'title'   => __('Enable/Disable', 'toss-payments-for-woocommerce'),
+					'type'    => 'checkbox',
+					'label'   => __('Enable Toss Payments', 'toss-payments-for-woocommerce'),
+					'default' => 'yes',
+				],
+				'title' => [
+					'title'       => __('Title', 'toss-payments-for-woocommerce'),
+					'type'        => 'text',
+					'description' => __('Title shown at checkout.', 'toss-payments-for-woocommerce'),
+					'default'     => __('Toss Payments', 'toss-payments-for-woocommerce'),
+					'desc_tip'    => true,
+				],
+				'description' => [
+					'title'       => __('Description', 'toss-payments-for-woocommerce'),
+					'type'        => 'textarea',
+					'description' => __('Payment method description shown at checkout.', 'toss-payments-for-woocommerce'),
+					'default'     => __('Pay securely using Toss Payments.', 'toss-payments-for-woocommerce'),
+					'desc_tip'    => true,
+				],
+				'mode' => [
+					'title'       => __('Mode', 'toss-payments-for-woocommerce'),
+					'type'        => 'select',
+					'description' => __('Select the payment mode to use.', 'toss-payments-for-woocommerce'),
+					'default'     => 'demo',
+					'options'     => [
+						'demo' => __('Demo Mode (Using Toss Docs Test Keys)', 'toss-payments-for-woocommerce'),
+						'test' => __('Test Mode (Using Your Test Keys)', 'toss-payments-for-woocommerce'),
+						'live' => __('Live Mode (Using Your Production Keys)', 'toss-payments-for-woocommerce'),
+					],
+					'desc_tip'    => true,
+				],
+				'test_client_key' => [
+					'title'       => __('Test Client Key', 'toss-payments-for-woocommerce'),
+					'type'        => 'text',
+					'description' => __('Your Toss Payments test client key. Required for Test Mode.', 'toss-payments-for-woocommerce'),
+					'default'     => '',
+					'desc_tip'    => true,
+				],
+				'test_secret_key' => [
+					'title'       => __('Test Secret Key', 'toss-payments-for-woocommerce'),
+					'type'        => 'password',
+					'description' => __('Your Toss Payments test secret key. Required for Test Mode.', 'toss-payments-for-woocommerce'),
+					'default'     => '',
+					'desc_tip'    => true,
+				],
+				'live_client_key' => [
+					'title'       => __('Live Client Key', 'toss-payments-for-woocommerce'),
+					'type'        => 'text',
+					'description' => __('Your Toss Payments live client key. Required for Live Mode.', 'toss-payments-for-woocommerce'),
+					'default'     => '',
+					'desc_tip'    => true,
+				],
+				'live_secret_key' => [
+					'title'       => __('Live Secret Key', 'toss-payments-for-woocommerce'),
+					'type'        => 'password',
+					'description' => __('Your Toss Payments live secret key. Required for Live Mode.', 'toss-payments-for-woocommerce'),
+					'default'     => '',
+					'desc_tip'    => true,
+				],
+				'debug' => [
+					'title'       => __('Debug log', 'toss-payments-for-woocommerce'),
+					'type'        => 'checkbox',
+					'label'       => __('Enable logging', 'toss-payments-for-woocommerce'),
+					'default'     => 'no',
+					'description' => __('Log Toss Payments events, such as webhook requests.', 'toss-payments-for-woocommerce'),
+				],
+			];
+		}
     
     /**
      * Process payment at checkout. Returns redirect to the Toss Widget page.
