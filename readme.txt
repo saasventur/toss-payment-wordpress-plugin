@@ -16,14 +16,12 @@ Seamlessly integrate Korean Toss Payments into your WooCommerce store with our o
 
 [Toss Payments for WooCommerce](https://www.saasventur.com/projects/toss-payment-plugin) enables Korean e-commerce businesses to accept payments through Toss's popular payment gateway with a modern checkout experience.
 
-=== Key Features ===
 * **Multiple Operation Modes** - Supports Demo, Test, and Live environments
 * **Enhanced Payment Widget** - Beautiful checkout experience with Toss's latest widget
 * **Complete Payment Methods** - Credit cards, virtual accounts, mobile payments & more
 * **Webhook Support** - Real-time payment notifications and status updates
 
 Developed by [SaasVentur](https://saasventur.com), a professional software agency specializing in e-commerce solutions.
-
 
 == Frequently Asked Questions ==
 
@@ -45,16 +43,7 @@ You can create a Toss Payments account and find your API keys in the dashboard.
 == Upgrade Notice ==
 
 = 1.1.0 =
-Update to access mobile payment support and improved reliability.
-
-
-### Key Features
-* **Multiple Operation Modes** - Supports Demo, Test, and Live environments
-* **Enhanced Payment Widget** - Beautiful checkout experience with Toss's latest widget
-* **Complete Payment Methods** - Credit cards, virtual accounts, mobile payments & more
-* **Webhook Support** - Real-time payment notifications and status updates
-
-Developed by [SaasVentur](https://saasventur.com), a professional software agency specializing in e-commerce solutions.
+New mobile payments support and improved webhook reliability for payment processing. This update enhances payment options and stability.
 
 == Installation ==
 1. Upload the plugin files to `/wp-content/plugins/toss-payments-widget`
